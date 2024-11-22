@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Simple Event">
+        <div class="slds-m-around_medium">
+            <p
+                class="slds-text-align_center slds-var-m-vertical_medium content"
+            >
+                Page {pointerValue}
+            </p>
+            <c-paginator
+            class="slds-show slds-is-relative"
+            onprevious={handlePrevious}
+            onnext={handleNext}
+        ></c-paginator>
+        </div>
+    </lightning-card>
+</template>
