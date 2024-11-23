@@ -16,8 +16,9 @@ public with sharing class LWCBoxAuthController {
         req.setEndpoint('https://api.box.com/oauth2/token');
         req.setMethod('POST');
         req.setHeader('Accept', 'application/json');
-        req.setBody('grant_type=authorization_code&code='+ code +'&client_id'+LWCBoxAuthController.client_id+'&client_secret='+LWCBoxAuthController.client_secret);
+        req.setBody('grant_type=authorization_code&code='+code+'&client_id='+LWCBoxAuthController.client_id+'&client_secret='+LWCBoxAuthController.client_secret);
         
+        System.debug('Request: ===> '+req);
         
         HttpResponse res = http.send(req);
         
